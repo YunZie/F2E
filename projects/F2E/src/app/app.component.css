@@ -1,0 +1,34 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	float: left;
+}
+
+.list-group-item:hover {
+	cursor: pointer;
+}
+
+.container > div{
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  max-height: 120px;
+  height: auto;
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fail-img{
+  mix-blend-mode: luminosity;
+  opacity: 0.5;
+}
+.card-header:before {
+   content: attr(title) "❚ ";
+    color: green;
+    font-size: 18pt;
+
+ } 

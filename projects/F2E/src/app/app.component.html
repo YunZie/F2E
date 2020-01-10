@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-header row align-items-center">
+  	進行中
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let data of succdata.orders">
+    <li class="list-group-item">
+    	<div class="container col-4">
+    		<div >
+    			<img  src="{{ data.logo }}">
+    		</div>
+    	</div>
+    	<div class="container col-8 ">
+    		<p class="text-success"><b>{{ data.status.type }}</b></p> 
+    		<p>預計出貨:{{ data.date }}</p>
+    	</div>
+    	<div class="container col-8 ">
+    		<p>{{ data.name }}</p>
+    	</div>
+    </li>
+  </ul>
+  <div class="card-header row align-items-center">
+    已完成
+  </div>
+  <ul class="list-group list-group-flush" *ngFor="let data of faildata.orders">
+    <li class="list-group-item">
+    	<div class="container col-4">
+    		<div >
+    			<img class="fail-img" src="{{ data.logo }}">
+    		</div>
+    	</div>
+    	<div class="container col-8 ">
+    		<p><b>{{ data.status.type }}</b></p> 
+    	</div>
+
+    	<div class="container col-8 ">
+    		<p>{{ data.name }}</p>
+    	</div>
+    </li>
+  </ul>
+</div>
