@@ -2,12 +2,14 @@
 FROM node:13.0.1
 
 # set working directory
-WORKDIR /projects/F2E/src
+WORKDIR /F2E
+COPY package.json ./package.json
+
+# install and cache app dependencies
+RUN npm install
+RUN npm install -g @angular/cli@8.3.17
 
 COPY . .
 
-RUN npm install
-RUN npm run build -- --prod --output-path dist
-
 # start app
-CMD ng serve --host 0.0.0.0 --port 80
+# CMD ng serve --host 0.0.0.0 --port 80
